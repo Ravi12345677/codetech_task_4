@@ -1,0 +1,15 @@
+<div id="webchat" role="main"></div>
+<script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+<script>
+    const directLine = window.WebChat.createDirectLine({
+        token: '<Direct-Line-Token>'
+    });
+
+    window.WebChat.renderWebChat({
+        directLine: directLine,
+        userID: 'user_' + Date.now(),
+        username: 'Visitor',
+        locale: 'en-US',
+        styleOptions: { botAvatarInitials: 'AI', userAvatarInitials: 'You' }
+    }, document.getElementById('webchat'));
+</script>
